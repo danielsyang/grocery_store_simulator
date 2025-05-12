@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwb5qvhvtdhlv"]
+
+[ext_resource type="Script" uid="uid://dxicaio2pafov" path="res://scenes/trees/tree.gd" id="1_pwjg6"]
+[ext_resource type="Texture2D" uid="uid://bk3cos06nxtfg" path="res://scenes/trees/5_Fruit_Trees.png" id="2_y3rrg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y3rrg"]
+radius = 21.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3rrg"]
+size = Vector2(12, 13.6875)
+
+[node name="Tree" type="StaticBody2D"]
+collision_mask = 0
+script = ExtResource("1_pwjg6")
+
+[node name="TrunkArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Trunk" type="Sprite2D" parent="TrunkArea"]
+position = Vector2(0, -7)
+texture = ExtResource("2_y3rrg")
+region_enabled = true
+region_rect = Rect2(80, 64, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrunkArea"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_y3rrg")
+
+[node name="Top" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 10
+y_sort_enabled = true
+position = Vector2(0, -43)
+texture = ExtResource("2_y3rrg")
+region_enabled = true
+region_rect = Rect2(52, 8, 72, 56)
+
+[node name="UnripeFruits" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 10
+y_sort_enabled = true
+position = Vector2(0, -42)
+texture = ExtResource("2_y3rrg")
+region_enabled = true
+region_rect = Rect2(132, 8, 72, 56)
+
+[node name="RipeFruits" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 10
+y_sort_enabled = true
+position = Vector2(0, -43)
+texture = ExtResource("2_y3rrg")
+region_enabled = true
+region_rect = Rect2(212, 8, 72, 56)
+
+[node name="FruitGrowthTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_y3rrg")
