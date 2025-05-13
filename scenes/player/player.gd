@@ -1,9 +1,12 @@
 extends CharacterBody2D
+class_name Player
 
 const SPEED = 200
 const ACCELERATION = 10
 
 @onready var animatedSprite: AnimatedSprite2D = $AnimatedSprite2D
+
+@export var inventory: Inventory
 
 func _process(_delta):
     var movement_vector = get_movement_vector()
@@ -31,3 +34,6 @@ func get_movement_vector() -> Vector2:
     var y_movement = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
     return Vector2(x_movement, y_movement)
+
+func add_item_to_inventory(item: InventoryItem):
+    inventory.items.append(item)
