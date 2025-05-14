@@ -6,7 +6,7 @@ extends StaticBody2D
 @onready var empty_fruit_top: Sprite2D = %Top
 @onready var surround_area: Area2D = $TrunkArea
 
-const APPLE = preload("res://resources/inventory/items/apple.tres")
+const APPLE = preload("res://resources/inventory/items/apple.tres") as InventoryItem
 
 var player_nearby: bool = false
 var is_ripe: bool = false
@@ -31,7 +31,12 @@ func harvest_tree():
 	if player == null:
 		return
 
-	player.add_item_to_inventory(APPLE)
+	var inventory_slot = InventorySlot.new()
+
+	inventory_slot.item = APPLE
+	inventory_slot.amount = 6
+
+	player.add_item_to_inventory(inventory_slot)
 
 	show_tree_empty()
 	timer.start()

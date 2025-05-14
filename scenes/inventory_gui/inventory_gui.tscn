@@ -24,8 +24,8 @@ grow_vertical = 0
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Control"]
 layout_mode = 0
-offset_right = 107.0
-offset_bottom = 36.0
+offset_right = 154.0
+offset_bottom = 51.0
 texture = ExtResource("1_u6510")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -40,22 +40,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.0
-offset_top = -20.0
-offset_right = 46.0
-offset_bottom = 20.0
+offset_left = -70.5
+offset_top = -23.5
+offset_right = 71.5
+offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
 columns = 4
 
 [node name="InventorySlot" parent="Control/NinePatchRect/SlotContainer" instance=ExtResource("2_onpxd")]
+custom_minimum_size = Vector2(32, 30)
 layout_mode = 2
 
 [node name="InventorySlot2" parent="Control/NinePatchRect/SlotContainer" instance=ExtResource("2_onpxd")]
+custom_minimum_size = Vector2(32, 30)
 layout_mode = 2
 
 [node name="InventorySlot3" parent="Control/NinePatchRect/SlotContainer" instance=ExtResource("2_onpxd")]
+custom_minimum_size = Vector2(32, 30)
 layout_mode = 2
 
 [node name="InventorySlot4" parent="Control/NinePatchRect/SlotContainer" instance=ExtResource("2_onpxd")]
+custom_minimum_size = Vector2(32, 30)
 layout_mode = 2

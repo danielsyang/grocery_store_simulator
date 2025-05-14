@@ -17,20 +17,22 @@ grow_vertical = 2
 script = ExtResource("1_g1vn4")
 
 [node name="Background" type="Sprite2D" parent="."]
+position = Vector2(0, -5.5)
+scale = Vector2(1.55, 1.55)
 texture = ExtResource("1_o61bo")
 centered = false
 offset = Vector2(0, 10)
 vframes = 2
 
 [node name="Item" type="Sprite2D" parent="."]
-position = Vector2(10, 20)
+position = Vector2(14, 25)
 
 [node name="Quantity" type="Label" parent="Item"]
 visible = false
-offset_left = 4.0
+z_index = 2
+offset_left = 10.0
 offset_top = -20.0
-offset_right = 13.0
+offset_right = 19.0
 offset_bottom = -1.0
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 16
-text = "0"
