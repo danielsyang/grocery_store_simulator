@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtn21fq8qhgvr"]
+[gd_scene load_steps=6 format=3 uid="uid://dtn21fq8qhgvr"]
 
 [ext_resource type="Script" uid="uid://bpekt4ld4d03a" path="res://scenes/game_camera.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://b7ju17kqe2rub" path="res://scenes/player/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://bwb5qvhvtdhlv" path="res://scenes/trees/tree.tscn" id="3_sugp2"]
 [ext_resource type="TileSet" uid="uid://0knyrak012yr" path="res://resources/tile_set.tres" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cawt5d5p61c7a" path="res://scenes/inventory_gui/inventory_gui.tscn" id="5_tbgi4"]
 
 [node name="Main" type="Node2D"]
 
@@ -28,3 +29,5 @@ position = Vector2(-113, 88)
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 position = Vector2(32, 37)
+
+[node name="InventoryGui" parent="Player" instance=ExtResource("5_tbgi4")]
