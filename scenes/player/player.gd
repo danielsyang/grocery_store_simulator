@@ -36,4 +36,4 @@ func get_movement_vector() -> Vector2:
     return Vector2(x_movement, y_movement)
 
 func add_item_to_inventory(item: InventoryItem):
-    inventory.items.append(item)
+    inventory.add_item(item)

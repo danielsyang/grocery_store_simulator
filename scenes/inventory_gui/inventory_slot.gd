@@ -4,10 +4,10 @@ extends Panel
 @onready var item_sprite: Sprite2D = $Item
 
 func update_item(item: InventoryItem):
-    if item == null:
-        background_sprite.frame = 0
-        item_sprite.visible = false
-    else:
-        background_sprite.frame = 1
-        item_sprite.visible = true
-        item_sprite.texture = item.texture
+	if item == null:
+		background_sprite.frame = 0
+		item_sprite.visible = false
+	else:
+		background_sprite.frame = 1
+		item_sprite.visible = true
+		item_sprite.texture = item.texture

@@ -27,6 +27,10 @@ window/stretch/mode="viewport"
 
 player=""
 
+[gui]
+
+theme/custom="uid://cm56t6a0xnroq"
+
 [input]
 
 move_up={

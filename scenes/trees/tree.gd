@@ -31,10 +31,7 @@ func harvest_tree():
 	if player == null:
 		return
 
-	for i in 6:
-		player.add_item_to_inventory(APPLE)
-
-	print(player.inventory.items)
+	player.add_item_to_inventory(APPLE)
 
 	show_tree_empty()
 	timer.start()
