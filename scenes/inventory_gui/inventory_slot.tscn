@@ -26,10 +26,11 @@ vframes = 2
 position = Vector2(10, 20)
 
 [node name="Quantity" type="Label" parent="Item"]
+visible = false
 offset_left = 4.0
 offset_top = -20.0
 offset_right = 13.0
 offset_bottom = -1.0
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 16
-text = "6"
+text = "0"
